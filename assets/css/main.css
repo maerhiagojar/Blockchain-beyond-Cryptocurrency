@@ -836,8 +836,8 @@ section,
 
 /*--------------------------------------------------------------
 # Hero Section
---------------------------------------------------------------*/
-.hero {
+
+<!--.hero {
   width: 100%;
   min-height: 75vh;
   position: relative;
@@ -846,6 +846,32 @@ section,
   align-items: center;
   background: url("../img/blockchain9.jpg") top left;
   background-size: cover;
+} 
+--------------------------------------------------------------*/
+.hero {
+  width: 100%;
+  min-height: 75vh; /* Adjust height as needed */
+  position: relative;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  background: url("../img/blockchain9.jpg") center center no-repeat; /* Center the image */
+  background-size: cover; /* Ensure the image covers the entire hero section */
+  background-attachment: fixed; /* Optional: Adds a parallax effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 50vh; /* Reduce height for smaller devices */
+    background-attachment: scroll; /* Disable parallax on smaller devices */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: 40vh; /* Further reduce height for mobile devices */
+  }
 }
 
 .hero:before {
@@ -876,7 +902,7 @@ section,
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin: 5px 0 30px 0;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400;
 }
 
@@ -1221,6 +1247,16 @@ section,
 
 .services .service-item:hover h3 {
   color: var(--accent-color);
+}
+
+/* Add margin to the Transaction section */
+.service-item.position-relative {
+  margin-bottom: 40px; /* Adjust the value as needed */
+}
+
+/* Alternatively, add margin to the Supply Chain Transparency section */
+#supply-chain {
+  margin-top: 40px; /* Adjust the value as needed */
 }
 
 /*--------------------------------------------------------------
